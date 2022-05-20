@@ -1,5 +1,9 @@
 import Image from 'next/image';
 
 export const Header: React.FC = () => {
-  return <h1>Header</h1>;
+  return (
+    <div>
+      <Image src='/public/images/logo.svg' alt='ig.news' />;
+    </div>
+  );
 };
