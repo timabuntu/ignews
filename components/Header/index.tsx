@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '../../public/images/avatar.svg';
+import logo from '../../public/images/logo.svg';
 export const Header: React.FC = () => {
   return (
     <div>
