@@ -9,7 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | ig.news</title>
       </Head>
-      <main className='flex bg-pink-200 justify-between 8 mx-auto max-w-6xl h-[calc(100vh-5rem)] items-center'>
+      <main className='flex justify-between 8 mx-auto max-w-6xl h-[calc(100vh-5rem)] items-center'>
         <section>
           <span>👏 Hey, welcome</span>
           <h1>
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           <p>Get access to all the publications</p>
           <span>for $9.90 month</span>
         </section>
-        <Image src={avatar} alt='avatar Girl coding' />
+        <Image src={avatar} alt='avatar Girl coding' width={336} height={521} />
       </main>
     </>
   );
