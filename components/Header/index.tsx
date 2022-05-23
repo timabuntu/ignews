@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import logo from '../../public/images/logo.svg';
+import { SignInButton } from '../SignInButton';
 export const Header = () => {
   return (
     <div className='w-full h-20 border-b border-zinc-700'>
@@ -17,6 +18,9 @@ export const Header = () => {
             Posts
           </a>
         </nav>
+        <div className='flex ml-auto'>
+          <SignInButton />
+        </div>
       </header>
     </div>
   );
