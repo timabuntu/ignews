@@ -9,15 +9,18 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | ig.news</title>
       </Head>
-      <main className='flex justify-between 8 mx-auto max-w-6xl h-[calc(100vh-5rem)] items-center'>
+      <main className='flex justify-between 8 mx-auto container h-[calc(100vh-5rem)] items-center'>
         <section>
-          <span>👏 Hey, welcome</span>
-          <h1>
-            News about the
-            <span>React</span>
+          <span className='text-2xl font-semibold'>👏 Hey, welcome</span>
+          <h1 className='font-bold text-7xl leading-[4.5rem] mt-10 text'>
+            News about the <br />
+            <span className='text-cyan-500'>React</span> world.
           </h1>
-          <p>Get access to all the publications</p>
-          <span>for $9.90 month</span>
+
+          <p className='mt-6 text-2xl leading-9'>
+            Get access to all the publications
+          </p>
+          <span className='font-bold text-cyan-500'>for $9.90 month</span>
         </section>
         <Image src={avatar} alt='avatar Girl coding' width={336} height={521} />
       </main>
