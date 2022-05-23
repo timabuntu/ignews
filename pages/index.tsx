@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
+import avatar from '../public/images/avatar.svg';
 
 const Home: NextPage = () => {
   return (
@@ -7,7 +9,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | ig.news</title>
       </Head>
-      <h1 className='text-4xl font-bold uppercase'>Ig.news</h1>
+      <main>
+        <section></section>
+        <Image src={avatar} alt='avatar Girl coding' />
+      </main>
     </>
   );
 };
