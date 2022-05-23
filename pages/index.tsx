@@ -9,7 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | ig.news</title>
       </Head>
-      <main>
+      <main className='flex bg-pink-200 justify-between 8 mx-auto max-w-6xl h-[calc(100vh-5rem)] items-center'>
         <section>
           <span>👏 Hey, welcome</span>
           <h1>

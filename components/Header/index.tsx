@@ -4,7 +4,7 @@ import { SignInButton } from '../SignInButton';
 export const Header = () => {
   return (
     <div className='w-full h-20 border-b border-zinc-700'>
-      <header className='flex items-center h-full max-w-6xl px-8 mx-auto'>
+      <header className='flex items-center h-full max-w-6xl mx-auto'>
         <figure className='grid'>
           <Image src={logo} alt='logo ignews' />
         </figure>
