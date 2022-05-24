@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { SubscribeButton } from '../components/SubscribeButton';
 import avatar from '../public/images/avatar.svg';
 
-export const Home: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -32,7 +32,14 @@ export const Home: NextPage = () => {
     </>
   );
 };
+export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  return {};
+  console.log('olá');
+
+  return {
+    props: {
+      name: 'thiago',
+    },
+  };
 };
