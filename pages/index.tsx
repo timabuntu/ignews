@@ -36,7 +36,9 @@ const Home: NextPage = () => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const price = await stripe.prices.retrieve('price_1Jz0a3CTJIQ3J082LEC8gxaV');
+  const price = await stripe.prices.retrieve('price_1Jz0a3CTJIQ3J082LEC8gxaV', {
+    expand: ['product'],
+  });
 
   return {
     props: {
