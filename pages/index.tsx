@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { SubscribeButton } from '../components/SubscribeButton';
 import avatar from '../public/images/avatar.svg';
+import { stripe } from '../services/stripe';
 
 const Home: NextPage = () => {
   return (
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  console.log('olá');
+  const price = await stripe.prices.retrieve('price_1Jz0a3CTJIQ3J082LEC8gxaV');
 
   return {
     props: {
