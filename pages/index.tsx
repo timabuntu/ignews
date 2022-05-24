@@ -1,10 +1,11 @@
 import type { NextPage } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { SubscribeButton } from '../components/SubscribeButton';
 import avatar from '../public/images/avatar.svg';
 
-const Home: NextPage = () => {
+export const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -32,4 +33,6 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {};
+};
