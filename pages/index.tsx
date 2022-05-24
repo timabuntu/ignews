@@ -6,7 +6,14 @@ import { SubscribeButton } from '../components/SubscribeButton';
 import avatar from '../public/images/avatar.svg';
 import { stripe } from '../services/stripe';
 
-const Home: NextPage = () => {
+interface HomeProps {
+  product: {
+    productId: string;
+    amount: number;
+  };
+}
+
+const Home: NextPage<HomeProps> = ({ product }) => {
   return (
     <>
       <Head>
@@ -24,7 +31,14 @@ const Home: NextPage = () => {
             <p className='mt-6 text-2xl leading-9'>
               Get access to all the publications
             </p>
-            <span className='font-bold text-cyan-500'>for $9.90 month</span>
+            <span className='font-bold text-cyan-500'>
+              for{' '}
+              {new Intl.NumberFormat('pr-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              }).format(product.amount / 100)}{' '}
+              month
+            </span>
           </div>
           <SubscribeButton />
         </section>
@@ -40,9 +54,14 @@ export const getServerSideProps: GetServerSideProps = async () => {
     expand: ['product'],
   });
 
+  const product = {
+    prideId: price.id,
+    amount: price.unit_amount,
+  };
+
   return {
     props: {
-      name: 'thiago',
+      product,
     },
   };
 };
