@@ -1,5 +1,5 @@
 interface SubscribeButtonProps {
-  priceId: number;
+  priceId: string;
 }
 
 export const SubscribeButton = ({ priceId }: SubscribeButtonProps) => {
