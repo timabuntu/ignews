@@ -40,7 +40,7 @@ const Home: NextPage<HomeProps> = ({ product }) => {
               month
             </span>
           </div>
-          <SubscribeButton />
+          <SubscribeButton priceId={product.productId} />
         </section>
         <Image src={avatar} alt='avatar Girl coding' width={336} height={521} />
       </main>
