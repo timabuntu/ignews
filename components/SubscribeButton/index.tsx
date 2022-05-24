@@ -1,3 +1,3 @@
 export const SubscribeButton = () => {
-  return <h1>SubscribeButton</h1>;
+  return <button>Subscribe Now</button>;
 };
