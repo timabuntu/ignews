@@ -21,7 +21,7 @@ export const SignInButton = () => {
       className='h-12 px-6 transition rounded-full bg-zinc-700 hover:brightness-75'
     >
       <div className='flex items-center justify-center gap-4'>
-        <div className='p-1 bg-yellow-400 rounded-full'>
+        <div className='p-1 bg-yellow-500 rounded-full'>
           <GithubLogo weight='fill' size={20} color='#3f3f46' />
         </div>
         <p className='font-semibold'>Sign in with Github</p>
