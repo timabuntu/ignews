@@ -33,7 +33,7 @@ const Home: NextPage<HomeProps> = ({ product }) => {
             </p>
             <span className='font-bold text-cyan-500'>
               for{' '}
-              {new Intl.NumberFormat('pr-BR', {
+              {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
               }).format(product.amount / 100)}{' '}
