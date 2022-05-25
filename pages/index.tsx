@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { SubscribeButton } from '../components/SubscribeButton';
 import avatar from '../public/images/avatar.svg';
-import { stripe } from '../services/stripe';
+import stripe from '../services/stripe';
 
 interface HomeProps {
   product: {
@@ -33,7 +33,7 @@ const Home: NextPage<HomeProps> = ({ product }) => {
             </p>
             <span className='font-bold text-cyan-500'>
               for{' '}
-              {new Intl.NumberFormat('pr-BR', {
+              {new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',
               }).format(product.amount / 100)}{' '}
