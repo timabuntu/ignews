@@ -12,7 +12,8 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
+    async signIn({ user, account, profile, credentials }) {
+      const { email } = user;
       await fauna.query(
         query.Create(query.Collection('users'), {
           data: { email },
