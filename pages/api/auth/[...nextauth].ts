@@ -1,3 +1,5 @@
+import { query } from 'faunadb';
+
 import NextAuth from 'next-auth';
 import GitHubProvider from 'next-auth/providers/github';
 import { fauna } from '../../../services/fauna';
