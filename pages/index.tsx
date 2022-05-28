@@ -2,9 +2,9 @@ import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import { SubscribeButton } from '../components/SubscribeButton';
+import SubscribeButton from '../components/SubscribeButton';
 import avatar from '../public/images/avatar.svg';
-import stripe from '../services/stripe';
+import { stripe } from '../services/stripe';
 
 interface HomeProps {
   product: {
